@@ -8,7 +8,9 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class TestComponent implements OnInit {
 
   @Input() age: number;
-  @Output() clickAge = new EventEmitter();
+  @Input() name: string;
+  @Input() description: string;
+  @Output() clickSave = new EventEmitter();
 
   constructor() { }
 
@@ -16,8 +18,13 @@ export class TestComponent implements OnInit {
   }
 
 
+  // tslint:disable-next-line:typedef
   onClickSave(){
-    this.clickAge.emit('Hiciste click');
+    this.clickSave.emit({
+      name: this.name,
+      age: this.age,
+      description: this.description
+    });
   }
 
 }
