@@ -17,7 +17,7 @@ ngOnInit(){
 
   const aux = fromEvent(document, 'mousemove');
 
-  aux.subscribe(s => console.log('event: ', s.clientX + ',' + s.clientY ));
+  //aux.subscribe(s => console.log('event: ', s.clientX + ',' + s.clientY ));
 
 
 
@@ -29,7 +29,7 @@ ngOnInit(){
 }
 
 
-  saveClickChild($event: any) {
+  saveClickChild(event){
     console.log('Event Child: ', event);
   }
 }
