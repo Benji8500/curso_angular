@@ -13,8 +13,20 @@ import {
 
 @Component({
   selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.scss']
+  template: `<div style="border: 1px solid red;">
+    <p>Componente test 1</p>
+    <p>Entrada AGE: {{age}}</p>
+    <p>Entrada NAME: {{name}}</p>
+    <!-- Write your comments here llaves dobles para que reconozca la variable-->
+    <p>Entrada DESCRIPTION: {{description}}</p>
+    <button (click) ="onClickSave()">save</button>
+    <input type="text" [(ngModel)]="name">
+    <!-- Outputs es con parentesis -->
+    <!-- Inputs es con corchetes -->
+    <p>USER: {{user}}</p>
+  </div>`,
+  styles: ['.test{' +
+  '}']
 })
 export class TestComponent implements OnChanges, OnInit, DoCheck,
     AfterContentInit, AfterContentChecked, AfterViewInit,
