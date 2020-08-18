@@ -25,7 +25,7 @@ import {
     <!-- Inputs es con corchetes -->
     <p>USER: {{user}}</p>
   </div>`,
-  styles: ['.test{' +
+  styles: ['.components{' +
   '}']
 })
 export class TestComponent implements OnChanges, OnInit, DoCheck,

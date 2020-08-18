@@ -9,9 +9,11 @@ import {from, fromEvent} from 'rxjs';
 export class AppComponent implements OnInit{
   title = 'curso-angular';
   name = 'Benjamin';
-  sw= true;
+  sw = true;
   people = ['Alejandro', 'David', 'Jean-Luc', 'Quentin', 'Ingmar'];
+  aux = 3;
 
+  auxColor = 'red';
 ngOnInit(){
   const arr = from([1, 2, 3, 4, 5, 6]); // este array ya es un observable
 

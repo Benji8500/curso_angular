@@ -25,11 +25,24 @@
         <p>{{item}}========{{i+1}}</p>
     </div>
 
-    <div [ngSwitch]="3">
+    <div [ngSwitch]="aux">
         <p *ngSwitchCase="3">  El valor es 3</p>
         <p *ngSwitchCase="2"> El valor es 2</p>
         <p *ngSwitchDefault> No es ni 3 ni 2</p>
 
+    </div>
+
+    <button (click)="auxColor='yellow'"> Amarillo </button>
+    <button (click)="auxColor='green'"> Verde </button>
+    <button (click)="auxColor='red'"> Rojo</button>
+
+
+    <div [ngStyle]="{'border': '2px solid ' + auxColor, 'color': auxColor}">
+    people
+    </div>
+
+    <div [style.color]="auxColor" [style.border]="auxColor">
+        autos
     </div>
 
 
