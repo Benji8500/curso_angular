@@ -53,6 +53,20 @@
         class Example
     </div>
 
+    <persona name="Benjamin" lastName="Soto" age="22" enable="true"></persona>
+    <div *ngFor="let person of persons">
+        <div [ngStyle]="{'background': person.enable ? 'yellow' : 'green' }">
+            <persona [name]="person.name"
+                     [lastName]="person.lastName"
+                     [age]="person.age"
+                     [enable]="person.enable">
+
+            </persona>
+        </div>
+
+
+    </div>
+
     <app-test2>
 
     </app-test2>
