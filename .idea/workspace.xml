@@ -57,11 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/pipes" />
       <recent name="$PROJECT_DIR$/src/app/modules" />
       <recent name="$PROJECT_DIR$/src/app/user/components" />
       <recent name="$PROJECT_DIR$/src/app/admin/components" />
       <recent name="$PROJECT_DIR$/src/app/modules/producto/components" />
-      <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -95,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597608449552</updated>
-      <workItem from="1597608451273" duration="25509000" />
+      <workItem from="1597608451273" duration="26945000" />
     </task>
     <servers />
   </component>
