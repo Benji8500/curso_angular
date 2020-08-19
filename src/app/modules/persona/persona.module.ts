@@ -10,6 +10,9 @@ import {PersonaComponent} from './components/persona/persona.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+      PersonaComponent
   ]
 })
 export class PersonaModule { }
