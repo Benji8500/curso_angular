@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TestComponent } from './components/test.component';
 import {FormsModule} from '@angular/forms';
-import { PersonaComponent } from '../modules/persona/components/persona/persona.component';
 import { Test2Component } from './test2/test2.component';
+import {PersonaModule} from './modules/persona/persona.module';
+import {ProductoModule} from './modules/producto/producto.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    PersonaComponent,
-    Test2Component
+    Test2Component,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    PersonaModule,
+    ProductoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
