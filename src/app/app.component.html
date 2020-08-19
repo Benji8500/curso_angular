@@ -1,97 +1,46 @@
-<p>Benji</p>
-<div style="border: 1px solid darkred;">
-    <app-test
-            age="21"
-            [name]="name "
-            description="Estudiante"
-            (clickSave)="saveClickChild($event)">
+<div [ngStyle]="{'background': 'teal'}">
+    <p>6 - Super Ticket</p>
 
-    </app-test>   <!-- Write your comments here parenteisis en clickAge denota una funcion angular-->
-
-    <button (click) =changeName()>Change Name</button>
-    <p>Benjamin</p>
-
-    <app-test *ngIf="sw " name="Benjamin"> </app-test>
-
-    <button (click)="sw=false"> CHANGE SW</button>
-
-    <div *ngIf="sw">
-        <p>Esto sera destruido al apretar el boton</p>
-    </div>
-
-    <!-- NG for -->
-
-    <div *ngFor="let item of people; let i = index">
-        <p>{{item}}========{{i+1}}</p>
-    </div>
-
-    <div [ngSwitch]="aux">
-        <p *ngSwitchCase="3">  El valor es 3</p>
-        <p *ngSwitchCase="2"> El valor es 2</p>
-        <p *ngSwitchDefault> No es ni 3 ni 2</p>
-
-    </div>
-
-    <button (click)="auxColor='yellow'"> Amarillo </button>
-    <button (click)="auxColor='green'"> Verde </button>
-    <button (click)="auxColor='red'"> Rojo</button>
+    <div id="Stock Total">Stock Total:</div>
+    <div *ngIf="stockTotal===0">TODO VENDIDO</div>
+    <div>{{stockTotal}}</div>
 
 
-    <div [ngStyle]="{'border': '2px solid ' + auxColor, 'color': auxColor}">
-    people
-    </div>
 
-    <div [style.color]="auxColor" [style.border]="auxColor">
-        autos
-    </div>
-    <button (click)="auxClass=!auxClass">Change Class</button>
-    <div [ngClass]="{'test1': auxClass, 'test2':!auxClass}">
-        ng class example
-    </div>
+    <div id="Nacional">
+        <div>Nacional</div>
+        <div *ngFor="let band of bands; let i = index">
+            <div [ngStyle]="{'background': band.stock>0 ? 'orange' : 'red' }">
+                <div *ngIf="band.tipo==='nacional'">
+                    <app-band [name]="band.nombre | uppercase"
+                              [stock]="band.stock"
+                              [habilitado]="band.habilitado"
+                              [tipo]="band.tipo">
 
-    <div [class.test1]="auxClass">
-        class Example
-    </div>
+                    </app-band>
 
-    <persona name="Benjamin" lastName="Soto" age="22" enable="true"></persona>
-    <div *ngFor="let person of persons">
-        <div [ngStyle]="{'background': person.enable ? 'yellow' : 'green' }">
-            <persona [name]="person.name"
-                     [lastName]="person.lastName"
-                     [age]="person.age"
-                     [enable]="person.enable">
+                    <button [disabled]="band.stock===0" (click)="bands[i].stock=band.stock-1; stockTotal=stockTotal-1">COMPRAR</button>
+                </div>
+            </div>
 
-            </persona>
+
         </div>
-
-
     </div>
+    <div id="Internacional">
+        <div>Internacional</div>
+        <div *ngFor="let band of bands; let i = index">
+            <div [ngStyle]="{'background': band.stock>0 ? 'orange' : 'red' }">
+            <div *ngIf="band.tipo==='internacional'">
+                <app-band [name]="band.nombre | uppercase"
+                          [stock]="band.stock"
+                          [habilitado]="band.habilitado"
+                          [tipo]="band.tipo">
 
+                </app-band>
+                <button [disabled]="band.stock===0" (click)="band.stock=band.stock-1; stockTotal=stockTotal-1">COMPRAR</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 </div>
-<div [ngStyle]="{'padding': '200px'}">d</div>
-<app-prod1></app-prod1>
-<app-prod2></app-prod2>
-<app-prod3></app-prod3>
-<app-ad1></app-ad1>
-
-<p>PIPES</p>
-
-<p>PIPE JSON: {{persons | json}}</p>
-<p>PIPE UPPERCASE: {{'benjamin' | uppercase}}</p>
-<p>PIPE LOWERCASE: {{'BENJAMIN' | lowercase}}</p>
-<p>VAR NAME: {{name | test}}</p>
-<p>PIPE DATE {{'08/09/2020' | date: "MM/dd/yy: h:mm:ss" }}</p>
-
-
-Value: <input type="text" [(ngModel)]="auxNumber">
-Exponent: <input type="text" [(ngModel)]="exponent">
-Result: <p>{{auxNumber |expo:exponent : 'el exponente es'}}</p>
-
-<p>PURE: {{numberArray |pure}}</p>
-<p>IMPURE: {{numberArray |impure}}</p>
-<button (click)="numberArray.push(4)">Add</button>
-
-
-
-
