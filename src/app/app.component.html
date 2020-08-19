@@ -84,4 +84,14 @@
 <p>PIPE DATE {{'08/09/2020' | date: "MM/dd/yy: h:mm:ss" }}</p>
 
 
+Value: <input type="text" [(ngModel)]="auxNumber">
+Exponent: <input type="text" [(ngModel)]="exponent">
+Result: <p>{{auxNumber |expo:exponent : 'el exponente es'}}</p>
+
+<p>PURE: {{numberArray |pure}}</p>
+<p>IMPURE: {{numberArray |impure}}</p>
+<button (click)="numberArray.push(4)">Add</button>
+
+
+
 

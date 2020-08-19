@@ -17,6 +17,8 @@ export class AppComponent implements OnInit{
 
   auxClass = true;
 
+  numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   persons = [
     {
       name: 'Juan',
@@ -44,6 +46,9 @@ export class AppComponent implements OnInit{
     }
   ];
 
+  auxNumber = 2;
+  exponent = 2;
+
 ngOnInit(){
   const arr = from([1, 2, 3, 4, 5, 6]); // este array ya es un observable
 
@@ -53,13 +58,21 @@ ngOnInit(){
 
   // aux.subscribe(s => console.log('event: ', s.clientX + ',' + s.clientY ));
 
+  console.log('funcion pura:', this.suma(2, 3));
+  console.log('funcion impura:', this.impura(2, 3));
 
 
 
 
 
 
+}
+suma(a: number, b: number){
+  return a + b;
+}
 
+impura(a: number, b: number){
+    return a + b + Math.random();
 }
 
 
