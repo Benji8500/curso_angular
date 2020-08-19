@@ -14,6 +14,8 @@ export class AppComponent implements OnInit{
   aux = 3;
 
   auxColor = 'red';
+
+  auxClass =true;
 ngOnInit(){
   const arr = from([1, 2, 3, 4, 5, 6]); // este array ya es un observable
 
