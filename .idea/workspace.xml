@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/modules/producto/components" />
       <recent name="$PROJECT_DIR$/src/app/modules" />
+      <recent name="$PROJECT_DIR$/src/app/user/components" />
+      <recent name="$PROJECT_DIR$/src/app/admin/components" />
+      <recent name="$PROJECT_DIR$/src/app/modules/producto/components" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/app/components" />
-      <recent name="$PROJECT_DIR$/src/modules/persona/components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -94,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597608449552</updated>
-      <workItem from="1597608451273" duration="23828000" />
+      <workItem from="1597608451273" duration="25509000" />
     </task>
     <servers />
   </component>

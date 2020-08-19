@@ -6,6 +6,10 @@ import {FormsModule} from '@angular/forms';
 import { Test2Component } from './test2/test2.component';
 import {PersonaModule} from './modules/persona/persona.module';
 import {ProductoModule} from './modules/producto/producto.module';
+import {AdminModule} from './modules/admin/admin.module';
+import {UserModule} from './modules/user/user.module';
+
+
 
 
 @NgModule({
@@ -13,12 +17,16 @@ import {ProductoModule} from './modules/producto/producto.module';
     AppComponent,
     TestComponent,
     Test2Component,
+
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     PersonaModule,
-    ProductoModule
+    ProductoModule,
+    AdminModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
