@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'persona',
   templateUrl: './persona.component.html',
   styleUrls: ['./persona.component.scss']

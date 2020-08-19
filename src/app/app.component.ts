@@ -22,25 +22,25 @@ export class AppComponent implements OnInit{
       name: 'Juan',
       lastName: 'Soria',
       age: '200',
-      enable: 'true'
+      enable: true
     },
     {
       name: 'Maria',
       lastName: 'Soria',
       age: '200',
-      enable: 'false'
+      enable: false
     },
     {
       name: 'Marco',
       lastName: 'Soria',
       age: '200',
-      enable: 'true'
+      enable: true
     },
     {
       name: 'Andres',
       lastName: 'Soria',
       age: '200',
-      enable: 'false'
+      enable: false
     }
   ];
 

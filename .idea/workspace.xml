@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/persona/persona.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/persona/persona.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/persona/persona.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/persona/persona.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/persona/persona.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/persona/components/persona/persona.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/persona/persona.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/persona/components/persona/persona.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/persona/persona.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/persona/persona.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/persona/components/persona/persona.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +67,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/components" />
+      <recent name="$PROJECT_DIR$/src/modules/persona/components" />
+      <recent name="$PROJECT_DIR$/src/modules" />
+      <recent name="$PROJECT_DIR$/src/app/persona" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -96,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597608449552</updated>
-      <workItem from="1597608451273" duration="19038000" />
+      <workItem from="1597608451273" duration="21827000" />
     </task>
     <servers />
   </component>
@@ -127,21 +134,37 @@
       <screen x="0" y="0" width="1440" height="846" />
     </state>
     <state x="673" y="204" key="EditFileWatcherDialog/0.0.1440.846@0.0.1440.846" timestamp="1597764933716" />
-    <state width="1277" height="216" key="GridCell.Tab.0.bottom" timestamp="1597613151514">
-      <screen x="0" y="0" width="1440" height="835" />
+    <state width="904" height="216" key="GridCell.Tab.0.bottom" timestamp="1597846643970">
+      <screen x="0" y="0" width="1440" height="854" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.bottom/0.0.1440.835@0.0.1440.835" timestamp="1597613151514" />
-    <state width="1277" height="216" key="GridCell.Tab.0.center" timestamp="1597613151513">
-      <screen x="0" y="0" width="1440" height="835" />
+    <state width="904" height="216" key="GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
+    <state width="904" height="216" key="GridCell.Tab.0.center" timestamp="1597846643969">
+      <screen x="0" y="0" width="1440" height="854" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.center/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
-    <state width="1277" height="216" key="GridCell.Tab.0.left" timestamp="1597613151512">
-      <screen x="0" y="0" width="1440" height="835" />
+    <state width="904" height="216" key="GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
+    <state width="904" height="216" key="GridCell.Tab.0.left" timestamp="1597846643969">
+      <screen x="0" y="0" width="1440" height="854" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.left/0.0.1440.835@0.0.1440.835" timestamp="1597613151512" />
-    <state width="1277" height="216" key="GridCell.Tab.0.right" timestamp="1597613151513">
-      <screen x="0" y="0" width="1440" height="835" />
+    <state width="904" height="216" key="GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
+    <state width="904" height="216" key="GridCell.Tab.0.right" timestamp="1597846643970">
+      <screen x="0" y="0" width="1440" height="854" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+    <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app.module.ts</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
