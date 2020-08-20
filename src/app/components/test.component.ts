@@ -1,4 +1,4 @@
-import {
+ import {
   Component,
   OnInit,
   Input,
@@ -8,22 +8,14 @@ import {
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
-  AfterViewInit, AfterViewChecked, OnDestroy
-} from '@angular/core';
+  AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges
+ } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   template: `<div style="border: 1px solid red;">
-    <p>Componente test 1</p>
-    <p>Entrada AGE: {{age}}</p>
     <p>Entrada NAME: {{name}}</p>
-    <!-- Write your comments here llaves dobles para que reconozca la variable-->
-    <p>Entrada DESCRIPTION: {{description}}</p>
-    <button (click) ="onClickSave()">save</button>
-    <input type="text" [(ngModel)]="name">
-    <!-- Outputs es con parentesis -->
-    <!-- Inputs es con corchetes -->
-    <p>USER: {{user}}</p>
+    <p>Entrada Last NAME: {{lastName}}</p>
   </div>`,
   styles: ['.components{' +
   '}']
@@ -31,9 +23,17 @@ import {
 export class TestComponent implements OnChanges, OnInit, DoCheck,
     AfterContentInit, AfterContentChecked, AfterViewInit,
     AfterViewChecked, OnDestroy {
-
+  intermediario:string;
   @Input() age: number;
-  @Input() name: string;
+  //interceptar inputs
+  @Input()
+  get name() {
+    return this.intermediario;
+  }
+  set name(name) {
+    this.intermediario = '...'+ name;
+  }
+  @Input() lastName:string;
   @Input() description: string;
   @Output() clickSave = new EventEmitter();
 
@@ -42,11 +42,16 @@ export class TestComponent implements OnChanges, OnInit, DoCheck,
   user:string = 'maria';
 
   constructor() { }
-  ngOnChanges(): void {
-    console.log('on changes');
+  ngOnChanges(changes: SimpleChanges){
+    if(changes && changes.lastName && changes.lastName.currentValue){
+      console.log("ON changes", changes.lastName.currentValue);
+      const aux = 'aaa'+ changes.lastName.currentValue;
+      this.lastName = aux;
+    }
+
   }
   ngOnInit(): void {
-    console.log('on Init');
+    console.log('on Init', this.name);
   }
 
   ngDoCheck() {
@@ -83,3 +88,19 @@ export class TestComponent implements OnChanges, OnInit, DoCheck,
   }
 
 }
+
+
+/*class persona {
+  name: string;
+  age: number;
+
+  constructor() {
+  }
+
+  getName(){
+    return name;
+  }
+  setName(name:string){
+    this.name=name;
+  }
+}*/

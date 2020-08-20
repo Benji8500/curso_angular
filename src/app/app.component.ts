@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   sw = true;
   people = ['Alejandro', 'David', 'Jean-Luc', 'Quentin', 'Ingmar'];
   aux = 3;
+  lastName ='Soto';
 
   auxColor = 'red';
 
