@@ -22,7 +22,6 @@
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="primerParcial" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,11 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/directives" />
+      <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/pipes" />
       <recent name="$PROJECT_DIR$/src/app/modules" />
       <recent name="$PROJECT_DIR$/src/app/user/components" />
-      <recent name="$PROJECT_DIR$/src/app/admin/components" />
-      <recent name="$PROJECT_DIR$/src/app/modules/producto/components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -96,7 +95,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597608449552</updated>
-      <workItem from="1597608451273" duration="28929000" />
+      <workItem from="1597608451273" duration="31627000" />
+      <workItem from="1597864837293" duration="6459000" />
     </task>
     <servers />
   </component>
@@ -121,31 +121,48 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="622" y="192" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597864259373">
+      <screen x="0" y="0" width="1440" height="853" />
+    </state>
+    <state x="622" y="192" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.853@0.0.1440.853" timestamp="1597864259373" />
     <state x="673" y="204" key="EditFileWatcherDialog" timestamp="1597764933716">
       <screen x="0" y="0" width="1440" height="846" />
     </state>
     <state x="673" y="204" key="EditFileWatcherDialog/0.0.1440.846@0.0.1440.846" timestamp="1597764933716" />
-    <state width="904" height="216" key="GridCell.Tab.0.bottom" timestamp="1597846643970">
-      <screen x="0" y="0" width="1440" height="854" />
+    <state width="932" height="220" key="GridCell.Tab.0.bottom" timestamp="1597865457900">
+      <screen x="0" y="0" width="1440" height="852" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.bottom/0.0.1440.835@0.0.1440.835" timestamp="1597613151514" />
+    <state width="932" height="220" key="GridCell.Tab.0.bottom/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
     <state width="904" height="216" key="GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
-    <state width="904" height="216" key="GridCell.Tab.0.center" timestamp="1597846643969">
-      <screen x="0" y="0" width="1440" height="854" />
+    <state width="932" height="220" key="GridCell.Tab.0.center" timestamp="1597865457899">
+      <screen x="0" y="0" width="1440" height="852" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.center/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+    <state width="932" height="220" key="GridCell.Tab.0.center/0.0.1440.852@0.0.1440.852" timestamp="1597865457899" />
     <state width="904" height="216" key="GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
-    <state width="904" height="216" key="GridCell.Tab.0.left" timestamp="1597846643969">
-      <screen x="0" y="0" width="1440" height="854" />
+    <state width="932" height="220" key="GridCell.Tab.0.left" timestamp="1597865457899">
+      <screen x="0" y="0" width="1440" height="852" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.left/0.0.1440.835@0.0.1440.835" timestamp="1597613151512" />
+    <state width="932" height="220" key="GridCell.Tab.0.left/0.0.1440.852@0.0.1440.852" timestamp="1597865457899" />
     <state width="904" height="216" key="GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
-    <state width="904" height="216" key="GridCell.Tab.0.right" timestamp="1597846643970">
-      <screen x="0" y="0" width="1440" height="854" />
+    <state width="932" height="220" key="GridCell.Tab.0.right" timestamp="1597865457900">
+      <screen x="0" y="0" width="1440" height="852" />
     </state>
     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+    <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
     <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
+    <state x="144" y="74" key="MergeDialog" timestamp="1597878515218">
+      <screen x="0" y="0" width="1440" height="854" />
+    </state>
+    <state x="144" y="74" key="MergeDialog/0.0.1440.854@0.0.1440.854" timestamp="1597878515218" />
+    <state x="468" y="146" key="git4idea.branch.GitSmartOperationDialog" timestamp="1597878504160">
+      <screen x="0" y="0" width="1440" height="854" />
+    </state>
+    <state x="468" y="146" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.854@0.0.1440.854" timestamp="1597878504160" />
   </component>
 </project>
