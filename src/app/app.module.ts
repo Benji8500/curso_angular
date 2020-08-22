@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { BandComponent } from './components/band/band.component';
+import {ConcertModule} from './modules/concert/concert.module';
+import {ProviderModule} from './modules/provider/provider.module';
 
 
 
@@ -18,6 +20,8 @@ import { BandComponent } from './components/band/band.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ConcertModule,
+    ProviderModule
 
   ],
   providers: [],

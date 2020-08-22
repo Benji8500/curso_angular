@@ -1,0 +1,105 @@
+Index: src/app/components/test.component.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+> import {\n  Component,\n  OnInit,\n  Input,\n  Output,\n  EventEmitter,\n  OnChanges,\n  DoCheck,\n  AfterContentInit,\n  AfterContentChecked,\n  AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges\n } from '@angular/core';\n\n@Component({\n  selector: 'app-test',\n  template: `<div style=\"border: 1px solid red;\">\n    <p>Entrada NAME: {{name}}</p>\n    <p>Entrada Last NAME: {{lastName}}</p>\n  </div>`,\n  styles: ['.components{' +\n  '}']\n})\nexport class TestComponent implements OnChanges, OnInit, DoCheck,\n    AfterContentInit, AfterContentChecked, AfterViewInit,\n    AfterViewChecked, OnDestroy {\n  intermediario:string;\n  @Input() age: number;\n  //interceptar inputs\n  @Input()\n  get name() {\n    return this.intermediario;\n  }\n  set name(name) {\n    this.intermediario = '...'+ name;\n  }\n  @Input() lastName:string;\n  @Input() description: string;\n  @Output() clickSave = new EventEmitter();\n\n\n\n  user:string = 'maria';\n\n  constructor() { }\n  ngOnChanges(changes: SimpleChanges){\n    if(changes && changes.lastName && changes.lastName.currentValue){\n      console.log(\"ON changes\", changes.lastName.currentValue);\n      const aux = 'aaa'+ changes.lastName.currentValue;\n      this.lastName = aux;\n    }\n\n  }\n  ngOnInit(): void {\n    console.log('on Init', this.name);\n  }\n\n  ngDoCheck() {\n    console.log('DO Check');\n  }\n\n  ngAfterContentInit() {\n    console.log('After content init');\n  }\n\n  ngAfterContentChecked() {\n    console.log('after content checked');\n  }\n  ngAfterViewInit() {\n    console.log('after view init');\n  }\n\n  ngAfterViewChecked() {\n    console.log('After view checked');\n  }\n\n  ngOnDestroy() {\n    console.log(\"on destroy\");\n  }\n\n\n  // tslint:disable-next-line:typedef\n  onClickSave(){\n    this.clickSave.emit({\n      name: this.name,\n      age: this.age,\n      description: this.description\n    });\n  }\n\n}\n\n\n/*class persona {\n  name: string;\n  age: number;\n\n  constructor() {\n  }\n\n  getName(){\n    return name;\n  }\n  setName(name:string){\n    this.name=name;\n  }\n}*/\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/components/test.component.ts	(revision b0ffeeddb013971d17effe520002b4f727759ec2)
++++ src/app/components/test.component.ts	(date 1597957931558)
+@@ -15,7 +15,7 @@
+   selector: 'app-test',
+   template: `<div style="border: 1px solid red;">
+     <p>Entrada NAME: {{name}}</p>
+-    <p>Entrada Last NAME: {{lastName}}</p>
++    <p>Entrada Last NAME: {{apellido}}</p>
+   </div>`,
+   styles: ['.components{' +
+   '}']
+@@ -33,7 +33,7 @@
+   set name(name) {
+     this.intermediario = '...'+ name;
+   }
+-  @Input() lastName:string;
++  @Input() apellido:string;
+   @Input() description: string;
+   @Output() clickSave = new EventEmitter();
+ 
+@@ -46,7 +46,7 @@
+     if(changes && changes.lastName && changes.lastName.currentValue){
+       console.log("ON changes", changes.lastName.currentValue);
+       const aux = 'aaa'+ changes.lastName.currentValue;
+-      this.lastName = aux;
++      this.apellido = aux;
+     }
+ 
+   }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"aad5985b-f198-472a-a841-dab4e6c95b4d\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/app.component.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/app.component.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/app.component.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/app.component.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/components/test.component.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/components/test.component.ts\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"primerParcial\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1gCAxkzoOgyJNMzYkfstpl4vTyR\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"ts.external.directory.path\" value=\"$PROJECT_DIR$/node_modules/typescript/lib\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/directives\" />\n      <recent name=\"$PROJECT_DIR$/src/app/components\" />\n      <recent name=\"$PROJECT_DIR$/src/app/pipes\" />\n      <recent name=\"$PROJECT_DIR$/src/app/modules\" />\n      <recent name=\"$PROJECT_DIR$/src/app/user/components\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"npm.Angular CLI Server\">\n    <configuration name=\"Tests (curso-angular)\" type=\"JavaScriptTestRunnerKarma\">\n      <config-file value=\"$PROJECT_DIR$/karma.conf.js\" />\n      <karma-package-dir value=\"$PROJECT_DIR$/node_modules/@angular/cli\" />\n      <working-directory value=\"$PROJECT_DIR$\" />\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular Application\" type=\"JavascriptDebugType\" uri=\"http://localhost:4200\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular CLI Server\" type=\"js.build_tools.npm\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"start\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"aad5985b-f198-472a-a841-dab4e6c95b4d\" name=\"Default Changelist\" comment=\"\" />\n      <created>1597608449552</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1597608449552</updated>\n      <workItem from=\"1597608451273\" duration=\"31627000\" />\n      <workItem from=\"1597864837293\" duration=\"6459000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n    <option name=\"exactExcludedFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/src/main.js\" />\n        <option value=\"$PROJECT_DIR$/src/app/app.component.js\" />\n        <option value=\"$PROJECT_DIR$/src/app/app.module.js\" />\n        <option value=\"$PROJECT_DIR$/src/environments/environment.js\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"622\" y=\"192\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1597864259373\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"853\" />\n    </state>\n    <state x=\"622\" y=\"192\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.853@0.0.1440.853\" timestamp=\"1597864259373\" />\n    <state x=\"673\" y=\"204\" key=\"EditFileWatcherDialog\" timestamp=\"1597764933716\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"846\" />\n    </state>\n    <state x=\"673\" y=\"204\" key=\"EditFileWatcherDialog/0.0.1440.846@0.0.1440.846\" timestamp=\"1597764933716\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1597865457900\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.bottom/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151514\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.bottom/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457900\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643970\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.center\" timestamp=\"1597865457899\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.center/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151513\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.center/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457899\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643969\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.left\" timestamp=\"1597865457899\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.left/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151512\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.left/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457899\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643969\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.right\" timestamp=\"1597865457900\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151513\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457900\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643970\" />\n    <state x=\"144\" y=\"74\" key=\"MergeDialog\" timestamp=\"1597878515218\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"854\" />\n    </state>\n    <state x=\"144\" y=\"74\" key=\"MergeDialog/0.0.1440.854@0.0.1440.854\" timestamp=\"1597878515218\" />\n    <state x=\"468\" y=\"146\" key=\"git4idea.branch.GitSmartOperationDialog\" timestamp=\"1597878504160\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"854\" />\n    </state>\n    <state x=\"468\" y=\"146\" key=\"git4idea.branch.GitSmartOperationDialog/0.0.1440.854@0.0.1440.854\" timestamp=\"1597878504160\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision b0ffeeddb013971d17effe520002b4f727759ec2)
++++ .idea/workspace.xml	(date 1597962113018)
+@@ -21,8 +21,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/app/components/test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/test.component.ts" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -98,6 +96,7 @@
+       <updated>1597608449552</updated>
+       <workItem from="1597608451273" duration="31627000" />
+       <workItem from="1597864837293" duration="6459000" />
++      <workItem from="1597957842730" duration="360000" />
+     </task>
+     <servers />
+   </component>
+@@ -133,30 +132,30 @@
+       <screen x="0" y="0" width="1440" height="846" />
+     </state>
+     <state x="673" y="204" key="EditFileWatcherDialog/0.0.1440.846@0.0.1440.846" timestamp="1597764933716" />
+-    <state width="932" height="220" key="GridCell.Tab.0.bottom" timestamp="1597865457900">
+-      <screen x="0" y="0" width="1440" height="852" />
++    <state width="932" height="220" key="GridCell.Tab.0.bottom" timestamp="1597885452947">
++      <screen x="0" y="0" width="1440" height="854" />
+     </state>
+     <state width="1277" height="216" key="GridCell.Tab.0.bottom/0.0.1440.835@0.0.1440.835" timestamp="1597613151514" />
+     <state width="932" height="220" key="GridCell.Tab.0.bottom/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
+-    <state width="904" height="216" key="GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
+-    <state width="932" height="220" key="GridCell.Tab.0.center" timestamp="1597865457899">
+-      <screen x="0" y="0" width="1440" height="852" />
++    <state width="932" height="220" key="GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854" timestamp="1597885452947" />
++    <state width="932" height="220" key="GridCell.Tab.0.center" timestamp="1597885452947">
++      <screen x="0" y="0" width="1440" height="854" />
+     </state>
+     <state width="1277" height="216" key="GridCell.Tab.0.center/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+     <state width="932" height="220" key="GridCell.Tab.0.center/0.0.1440.852@0.0.1440.852" timestamp="1597865457899" />
+-    <state width="904" height="216" key="GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
+-    <state width="932" height="220" key="GridCell.Tab.0.left" timestamp="1597865457899">
+-      <screen x="0" y="0" width="1440" height="852" />
++    <state width="932" height="220" key="GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854" timestamp="1597885452947" />
++    <state width="932" height="220" key="GridCell.Tab.0.left" timestamp="1597885452946">
++      <screen x="0" y="0" width="1440" height="854" />
+     </state>
+     <state width="1277" height="216" key="GridCell.Tab.0.left/0.0.1440.835@0.0.1440.835" timestamp="1597613151512" />
+     <state width="932" height="220" key="GridCell.Tab.0.left/0.0.1440.852@0.0.1440.852" timestamp="1597865457899" />
+-    <state width="904" height="216" key="GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854" timestamp="1597846643969" />
+-    <state width="932" height="220" key="GridCell.Tab.0.right" timestamp="1597865457900">
+-      <screen x="0" y="0" width="1440" height="852" />
++    <state width="932" height="220" key="GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854" timestamp="1597885452946" />
++    <state width="932" height="220" key="GridCell.Tab.0.right" timestamp="1597885452947">
++      <screen x="0" y="0" width="1440" height="854" />
+     </state>
+     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+     <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
+-    <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
++    <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597885452947" />
+     <state x="144" y="74" key="MergeDialog" timestamp="1597878515218">
+       <screen x="0" y="0" width="1440" height="854" />
+     </state>
