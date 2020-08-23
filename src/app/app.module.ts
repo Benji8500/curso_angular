@@ -13,6 +13,10 @@ import { ExpoPipe } from './pipes/expo.pipe';
 import { PurePipe } from './pipes/pure.pipe';
 import { ImpurePipe } from './pipes/impure.pipe';
 import { NgColorDirective } from './directives/ng-color.directive';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
+import {AppRouting} from './app.routing';
 
 
 
@@ -27,6 +31,9 @@ import { NgColorDirective } from './directives/ng-color.directive';
     PurePipe,
     ImpurePipe,
     NgColorDirective,
+    HomeComponent,
+    AboutComponent,
+    AdminComponent,
 
 
   ],
@@ -36,7 +43,8 @@ import { NgColorDirective } from './directives/ng-color.directive';
     PersonaModule,
     ProductoModule,
     AdminModule,
-    UserModule
+    UserModule,
+      AppRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
