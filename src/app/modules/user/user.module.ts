@@ -11,7 +11,7 @@ import {Us2Component} from './components/us2/us2.component';
 @NgModule({
   declarations: [
     Us1Component,
-    Us2Component
+    Us2Component,
   ],
   imports: [
     CommonModule

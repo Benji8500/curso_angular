@@ -27,16 +27,7 @@ export class NgColorDirective {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
-}
 
-class Person {
-  name: string;
-  lastName: string;
-
-  constructor(public name: string, public lastName: string) {
-    this.name = name;
-    this.lastName = lastName;
-  }
 }
 
 

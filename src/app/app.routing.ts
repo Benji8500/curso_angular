@@ -15,7 +15,10 @@ const routes: Routes = [
       ]
   },
   {path: 'admin', component: AdminComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'user', loadChildren: () => import('./modules/user-r/user-r.module').then(m => m.UserRModule)}
+  //sintaxis para cargar modulo a partir de rutas ^
+
 
 ];
 
