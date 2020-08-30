@@ -5,9 +5,11 @@ import { UserRRoutingModule } from './user-r-routing.module';
 import {UserRComponent} from './user-r/user-r.component';
 
 
+
 @NgModule({
   declarations: [
-      UserRComponent
+      UserRComponent,
+
   ],
   imports: [
     CommonModule,

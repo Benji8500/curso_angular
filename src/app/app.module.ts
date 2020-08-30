@@ -19,6 +19,13 @@ import { AdminComponent } from './components/admin/admin.component';
 import {AppRouting} from './app.routing';
 import { Home1Component } from './components/home1/home1.component';
 import { Home2Component } from './components/home2/home2.component';
+import { Userr1Component } from './modules/user-r/userr1/userr1.component';
+import { Userr2Component } from './modules/user-r/userr2/userr2.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
+
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -38,17 +45,24 @@ import { Home2Component } from './components/home2/home2.component';
     AdminComponent,
     Home1Component,
     Home2Component,
+    Userr1Component,
+    Userr2Component,
 
 
   ],
   imports: [
     BrowserModule,
+      BrowserAnimationsModule,
     FormsModule,
     PersonaModule,
     ProductoModule,
     AdminModule,
     UserModule,
-      AppRouting
+      AppRouting,
+      NgbModule,
+      NoopAnimationsModule,
+      MatSliderModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
