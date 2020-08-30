@@ -1,142 +1,25 @@
-<p>Benji</p>
-<div style="border: 1px solid darkred;">
-    <app-test
-            age="21"
-            [name]="name "
-            description="Estudiante"
-            (clickSave)="saveClickChild($event)">
-
-    </app-test>   <!-- Write your comments here parenteisis en clickAge denota una funcion angular-->
-
-    <button (click) =changeName()>Change Name</button>
-    <p>Benjamin</p>
-
-    <app-test *ngIf="sw " name="Benjamin"> </app-test>
-
-    <button (click)="sw=false"> CHANGE SW</button>
-
-    <div *ngIf="sw">
-        <p>Esto sera destruido al apretar el boton</p>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">PEDIDOS YA!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link"
+                   routerLinkActive="active"
+                   routerLink="home">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="admin">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="list">List</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+    </span>
     </div>
+</nav>
 
-    <!-- NG for -->
-
-    <div *ngFor="let item of people; let i = index">
-        <p>{{item}}========{{i+1}}</p>
-    </div>
-
-    <div [ngSwitch]="aux">
-        <p *ngSwitchCase="3">  El valor es 3</p>
-        <p *ngSwitchCase="2"> El valor es 2</p>
-        <p *ngSwitchDefault> No es ni 3 ni 2</p>
-
-    </div>
-
-    <button (click)="auxColor='yellow'"> Amarillo </button>
-    <button (click)="auxColor='green'"> Verde </button>
-    <button (click)="auxColor='red'"> Rojo</button>
-
-
-    <div [ngStyle]="{'border': '2px solid ' + auxColor, 'color': auxColor}">
-    people
-    </div>
-
-    <div [style.color]="auxColor" [style.border]="auxColor">
-        autos
-    </div>
-    <button (click)="auxClass=!auxClass">Change Class</button>
-    <div [ngClass]="{'test1': auxClass, 'test2':!auxClass}">
-        ng class example
-    </div>
-
-    <div [class.test1]="auxClass">
-        class Example
-    </div>
-
-    <persona name="Benjamin" lastName="Soto" age="22" enable="true"></persona>
-    <div *ngFor="let person of persons">
-        <div [ngStyle]="{'background': person.enable ? 'yellow' : 'green' }">
-            <persona [name]="person.name"
-                     [lastName]="person.lastName"
-                     [age]="person.age"
-                     [enable]="person.enable">
-
-            </persona>
-        </div>
-
-
-    </div>
-
-
-</div>
-<div [ngStyle]="{'padding': '200px'}">d</div>
-<app-prod1></app-prod1>
-<app-prod2></app-prod2>
-<app-prod3></app-prod3>
-<app-ad1></app-ad1>
-
-<p>PIPES</p>
-
-<p>PIPE JSON: {{persons | json}}</p>
-<p>PIPE UPPERCASE: {{'benjamin' | uppercase}}</p>
-<p>PIPE LOWERCASE: {{'BENJAMIN' | lowercase}}</p>
-<p>VAR NAME: {{name | test}}</p>
-<p>PIPE DATE {{'08/09/2020' | date: "MM/dd/yy: h:mm:ss" }}</p>
-
-
-Value: <input type="text" [(ngModel)]="auxNumber">
-Exponent: <input type="text" [(ngModel)]="exponent">
-Result: <p>{{auxNumber |expo:exponent : 'el exponente es'}}</p>
-
-<p>PURE: {{numberArray |pure}}</p>
-<p>IMPURE: {{numberArray |impure}}</p>
-<button (click)="numberArray.push(4)">Add</button>
-<div appNgColor [appNgColor]="'blue'">
-    Ricardo
-</div>
-<br>
-<br>
-<div appNgColor [appNgColor]="'orange'">
-    andres
-</div>
-<br>
-<br>
-<div appNgColor [appNgColor]="'magenta'">
-    12345
-</div>
-<br>
-<br>
-<div appNgColor [appNgColor]="'purple'">
-    7777
-</div>
-<br>
-<br>
-<button (click)="name='maria'; lastName= 'gutierrez'">Change</button>
-
-<app-test [name]="'Benjamins'" [lastName]="'Soto'"></app-test>
-
-
-<br>
-<button type="button" class="btn btn-danger">Danger</button>
-
-<p>ROUTING</p>
-
-<button routerLink="home">HOME</button>
-<button routerLink="about">ABOUT</button>
-<button routerLink="admin">ADMIN</button>
-<button routerLink="user">USER</button>
-
-
-
-
-
-<div style="border: 3px solid red;">
-    <router-outlet>
-
-    </router-outlet>
-</div>
-
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-
-
-<mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+<router-outlet></router-outlet>
