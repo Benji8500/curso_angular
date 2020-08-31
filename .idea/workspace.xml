@@ -21,90 +21,21 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/about/about.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/about/about.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/about/about.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/about/about.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/admin/admin.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/admin/admin.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/admin/admin.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/admin/admin.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home1/home1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home1/home1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home1/home1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home2/home2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home2/home2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home2/home2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/test.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/directives/ng-color.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad1/ad1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad1/ad1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad1/ad1.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad1/ad1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad2/ad2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad2/ad2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad2/ad2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad2/ad2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad3/ad3.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad3/ad3.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad3/ad3.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/ad3/ad3.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/persona/components/persona/persona.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/persona/components/persona/persona.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/persona/components/persona/persona.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/persona/persona.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod1/prod1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod1/prod1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod1/prod1.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod1/prod1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod2/prod2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod2/prod2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod2/prod2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod2/prod2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod3/prod3.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod3/prod3.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod3/prod3.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/components/prod3/prod3.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/producto/producto.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/user-r-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/user-r.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/user-r/user-r.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/user-r/user-r.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/user-r/user-r.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr1/userr1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr1/userr1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr1/userr1.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr1/userr1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr2/userr2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr2/userr2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr2/userr2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user-r/userr2/userr2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us1/us1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us1/us1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us1/us1.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us1/us1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us2/us2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us2/us2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us2/us2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/components/us2/us2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/user.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pipes/expo.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pipes/impure.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pipes/pure.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pipes/test.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/test2/test2.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/5-es2015.54397b58884cce623363.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/5-es5.54397b58884cce623363.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es2015.6651559ad94f3249a645.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es5.6651559ad94f3249a645.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/polyfills-es2015.95bb65e853d2781ac3bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/polyfills-es5.341d48ffc88eaeae911d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime-es2015.c82bd11fb97ea52a927a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime-es5.c82bd11fb97ea52a927a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/styles.09e2c710755c8867a460.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home/home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,10 +237,11 @@
       <screen x="0" y="0" width="1440" height="836" />
     </state>
     <state width="699" height="269" key="GridCell.Tab.3.right/0.0.1440.836@0.0.1440.836" timestamp="1598220214075" />
-    <state x="320" y="159" key="Vcs.Push.Dialog.v2" timestamp="1598481067560">
-      <screen x="0" y="0" width="1440" height="833" />
+    <state x="320" y="158" key="Vcs.Push.Dialog.v2" timestamp="1598824327657">
+      <screen x="0" y="0" width="1440" height="828" />
     </state>
     <state x="320" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.827@0.0.1440.827" timestamp="1598476864188" />
+    <state x="320" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.828@0.0.1440.828" timestamp="1598824327657" />
     <state x="320" y="159" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1598481067560" />
     <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.840@0.0.1440.840" timestamp="1598036263049" />
     <state x="929" y="296" width="350" height="300" key="org.angular.cli.generate" timestamp="1598823597826">
