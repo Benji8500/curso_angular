@@ -2,3 +2,19 @@
 
 
 <button routerLink="/pages">LOGIN</button>
+
+<!-- variable local -->
+<div #test class="class1 class2" id="test2">HOLA</div>
+
+<p>{{test.id}}</p>
+
+<button (click)="sw=!sw">SW</button>
+<div *ngIf="sw else esFalso">Es verdad</div>
+
+<ng-template #esFalso>
+    <p> ES FALSOOO</p>
+</ng-template>
+
+<p *ngElse="sw">SE MUESTRA SI ES FALSO</p>
+<ng-container></ng-container>
+<ng-content></ng-content>

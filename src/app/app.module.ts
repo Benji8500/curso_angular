@@ -23,13 +23,14 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-      AppRouting,
-      NgbModule,
-      NoopAnimationsModule,
-      MatSliderModule,
+    AppRouting,
+    NgbModule,
+    NoopAnimationsModule,
+    MatSliderModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
