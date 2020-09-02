@@ -1,7 +1,41 @@
 <p>Login works!</p>
+<!-- FORMULARIOS ORIENTADOS A TEMPLATE -->
+<!--
+
+Forma 1
+
+<div style="display: flex; flex-direction: column">
+    <input type="text" [(ngModel)]="username">
+    <input type="password" [(ngModel)]="password">
+
+Forma 2
+
+<div style="display: flex; flex-direction: column">
+    <form #formulario="ngForm">
+        <input type= "text" name="username" id="username" ngModel>
+        <input type="password" name="password" id="password" ngModel>
 
 
-<button routerLink="/pages">LOGIN</button>
+    </form>
+
+</div>
+
+
+Forma 3
+-->
+<div style="display: flex; flex-direction: column">
+    <form (ngSubmit)="onLogin2(formulario)"  #formulario="ngForm">
+        <input type= "text" name="username" id="username" ngModel>
+        <input type="password" name="password" id="password" ngModel>
+        <button type="submit">ENVIAR</button>
+    </form>
+
+</div>
+
+<button (click)="onLogin()">LOGIN</button>
+<button (click)="onLogin2(formulario)">LOGIN@</button>
+
+<!--<button routerLink="/pages">LOGIN</button> -->
 
 <!-- variable local -->
 <div #test class="class1 class2" id="test2">HOLA</div>
@@ -9,7 +43,6 @@
 <p>{{test.id}}</p>
 
 <button (click)="sw=!sw">SW</button>
-<div *ngIf="sw else esFalso">Es verdad</div>
 
 <ng-template #esFalso>
     <p> ES FALSOOO</p>
