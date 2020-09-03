@@ -5,6 +5,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
 import {NgElseDirective} from '../directives/ng-else.directive';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginRoutingModule,
     FormsModule,
       ReactiveFormsModule
+
 
   ]
 })

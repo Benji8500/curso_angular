@@ -1,3 +1,49 @@
+<mat-drawer-container  autosize style="width: 100%; height: 600px">
+    <mat-drawer #drawer class="example-sidenav" mode="side" [position]="'end'">
+        <form [formGroup]="productForm" style="display: flex; flex-direction: column">
+            <input formControlName="description" type="text">
+            <div *ngIf="productForm.get('description').invalid && (productForm.get('description').touched || productForm.get('description').dirty)"
+                 class="alert alert-danger">
+
+                <div *ngIf="productForm.get('description').errors.required">
+                    Description is required
+                </div>
+                <div *ngIf="productForm.get('description').errors.minlength">
+                    Description must be at least 4 characters
+                </div>
+                <div *ngIf="productForm.get('description').errors.maxlength">
+                    Description must be at least 5 characters long
+                </div>
+            </div>
+
+
+            <input formControlName="imageUrl" type="text">
+            <input formControlName="ownerId" type="text">
+            <input formControlName="price" type="text">
+            <input formControlName="title" type="text">
+
+        </form>
+
+        <button (click)="onEviar2()">Post</button>
+
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+    </div>
+
+</mat-drawer-container>
+
+
+
+
+
+
+
+
+
 <!--
 Ejemplo Simple
 <input type="text" [formControl]="nameControl" >
@@ -5,13 +51,4 @@ Ejemplo Simple
 
 -->
 <p>admin works</p>
-<form [formGroup]="productForm" style="display: flex; flex-direction: column">
-    <input formControlName="description" type="text">
-    <input formControlName="imageUrl" type="text">
-    <input formControlName="ownerId" type="text">
-    <input formControlName="price" type="text">
-    <input formControlName="title" type="text">
 
-</form>
-
-<button (click)="onEviar2()">BOTON</button>

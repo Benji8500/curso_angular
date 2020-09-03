@@ -14,4 +14,8 @@ export class ProductService {
   public getProducts(): Observable<any> {
     return this.http.get('https://angular-benjaminsoto-2020.firebaseio.com/products.json');
   }
+
+  public addProducts(product: any): Observable<any> {
+    return this.http.post('https://angular-benjaminsoto-2020.firebaseio.com/products.json', product);
+  }
 }
