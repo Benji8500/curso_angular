@@ -20,32 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_26_20,_5_14_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_26_20,_5_20_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_26_20__5_14_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_26_20__5_20_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5-es2015.77d25481eab5f31ef0f1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5-es5.77d25481eab5f31ef0f1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6-es2015.8418dde74f032d95c7f9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6-es5.8418dde74f032d95c7f9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7-es2015.7893d44ab9b5009fd7a6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7-es5.7893d44ab9b5009fd7a6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8-es2015.5d239d7f7579d1a7405c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8-es5.5d239d7f7579d1a7405c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9-es2015.3b1c0119cbfd775c8e16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9-es5.3b1c0119cbfd775c8e16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es2015.031ae23753a9fdaa985c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es5.031ae23753a9fdaa985c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime-es2015.2cab302eb06f6ee6b429.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime-es5.2cab302eb06f6ee6b429.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +98,7 @@
       <updated>1597608449552</updated>
       <workItem from="1597608451273" duration="31627000" />
       <workItem from="1597864837293" duration="6459000" />
-      <workItem from="1599083163203" duration="3854000" />
+      <workItem from="1599083163203" duration="6334000" />
     </task>
     <servers />
   </component>
@@ -256,13 +234,14 @@
       <screen x="0" y="0" width="1440" height="836" />
     </state>
     <state width="699" height="269" key="GridCell.Tab.3.right/0.0.1440.836@0.0.1440.836" timestamp="1598220214075" />
-    <state x="320" y="160" key="Vcs.Push.Dialog.v2" timestamp="1598987597376">
-      <screen x="0" y="0" width="1440" height="840" />
+    <state x="320" y="159" key="Vcs.Push.Dialog.v2" timestamp="1599089087245">
+      <screen x="0" y="0" width="1440" height="836" />
     </state>
     <state x="320" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.827@0.0.1440.827" timestamp="1598476864188" />
     <state x="320" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.828@0.0.1440.828" timestamp="1598824327657" />
     <state x="320" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.830@0.0.1440.830" timestamp="1598836602508" />
     <state x="320" y="159" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1598481067560" />
+    <state x="320" y="159" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1599089087245" />
     <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.840@0.0.1440.840" timestamp="1598987597376" />
     <state x="320" y="161" key="Vcs.Push.Dialog.v2/0.0.1440.844@0.0.1440.844" timestamp="1598920556073" />
     <state x="929" y="302" width="350" height="302" key="org.angular.cli.generate" timestamp="1598919675263">

@@ -32,12 +32,36 @@ Forma 3
 
 </div>
 
+
+
 <button (click)="onLogin()">LOGIN</button>
 <button (click)="onLogin2(formulario)">LOGIN@</button>
 
+
+<input class="form-control"
+       type="text"
+       required
+       minlength="3"
+       maxlength="5"
+       ngModel
+       #name="ngModel">
+
+<div *ngIf="name.invalid && (name.touched || name.dirty)"
+     class="alert alert-danger">
+
+    <div *ngIf="name.errors.required">
+        Name is required
+    </div>
+    <div *ngIf="name.errors.minlength">
+        Name must be at least 4 characters
+    </div>
+    <div *ngIf="name.errors.maxlength">
+    Name must be at least 5 characters long
+</div>
+</div>
 <!--<button routerLink="/pages">LOGIN</button> -->
 
-<!-- variable local -->
+<!-- variable local
 <div #test class="class1 class2" id="test2">HOLA</div>
 
 <p>{{test.id}}</p>
@@ -51,3 +75,4 @@ Forma 3
 <p *ngElse="sw">SE MUESTRA SI ES FALSO</p>
 <ng-container></ng-container>
 <ng-content></ng-content>
+-->
