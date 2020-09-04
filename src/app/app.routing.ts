@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Routing por componente:
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', loadChildren: () => import('./login/login.module'). then(m => m.LoginModule)},
+  {path: '', redirectTo: 'pages', pathMatch: 'full'},
   {path: 'pages', loadChildren: () => import('./pages/pages.module'). then(m => m.PagesModule)}
 
 
