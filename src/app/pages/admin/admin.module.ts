@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
       MatSidenavModule,
       MatButtonModule,
-      MatCardModule
+      MatCardModule,
+      MatFormFieldModule
   ],
   providers: [
       ProductService

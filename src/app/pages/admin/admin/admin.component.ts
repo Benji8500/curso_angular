@@ -16,6 +16,7 @@ export class AdminComponent implements OnInit, OnDestroy {
     prodGetSubs: Subscription;
 
     productForm: FormGroup;
+    idEdit: any;
 
   // Variable para el formulario reactivo
 
@@ -85,5 +86,24 @@ export class AdminComponent implements OnInit, OnDestroy {
           }
       );
 
+    }
+
+    onEdit(product: any): void{
+        this.productForm.patchValue(product);
+        this.idEdit = product.id;
+    }
+
+    onUpdate(): void {
+        this.productService.updateProducts(this.idEdit, this.productForm.value).subscribe(
+
+            res => {
+                console.log('RESPONSE', res);
+                this.loadProducts();
+            },
+            error => {
+                console.log('Error: ', error);
+            }
+
+        );
     }
 }

@@ -24,4 +24,8 @@ export class ProductService {
 
   }
 
+  public updateProducts(id:any, product: any): Observable<any> {
+    return this.http.put(`https://angular-benjaminsoto-2020.firebaseio.com/products/${id}.json`, product);
+  }
+
 }
