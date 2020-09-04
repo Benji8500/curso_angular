@@ -10,8 +10,12 @@ import {Subscription} from 'rxjs';
 })
 export class AdminComponent implements OnInit, OnDestroy {
   // grupo de formularios
+    products = [];
+
     prodSubs: Subscription;
-  productForm: FormGroup;
+    prodGetSubs: Subscription;
+
+    productForm: FormGroup;
 
   // Variable para el formulario reactivo
 
@@ -22,7 +26,23 @@ export class AdminComponent implements OnInit, OnDestroy {
               private productService: ProductService) {
 
 
-     this.productForm = this.formBuilder.group(
+      this.prodGetSubs = this.productService.getProducts().subscribe(res => {
+          // object entries convierte el Json en un array de arrays
+
+          console.log('RESPUESTA: ', res);
+          console.log('RESPUESTA: ', Object.entries(res));
+
+          Object.entries(res).map(p => this.products.push(p[1]));
+
+      });
+
+
+
+
+
+
+
+          this.productForm = this.formBuilder.group(
         {
           description: ['', [Validators.required, Validators.minLength(3) ]],
           imageUrl: [''],
@@ -33,11 +53,13 @@ export class AdminComponent implements OnInit, OnDestroy {
     );
   }
 
+
   ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
       this.prodSubs.unsubscribe();
+      this.prodGetSubs.unsubscribe();
   }
 
     /*onEnviar() {
