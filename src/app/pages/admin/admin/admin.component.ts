@@ -26,18 +26,6 @@ export class AdminComponent implements OnInit, OnDestroy {
               private productService: ProductService) {
 
 
-      this.prodGetSubs = this.productService.getProducts().subscribe(res => {
-          // object entries convierte el Json en un array de arrays
-
-          console.log('RESPUESTA: ', res);
-          console.log('RESPUESTA: ', Object.entries(res));
-
-          Object.entries(res).map(p => this.products.push(p[1]));
-
-      });
-
-
-
 
 
 
@@ -53,8 +41,19 @@ export class AdminComponent implements OnInit, OnDestroy {
     );
   }
 
+  loadProducts(): void{
+    this.products = [];
+    this.prodGetSubs = this.productService.getProducts().subscribe(res => {
+          // object entries convierte el Json en un array de arrays
+
+          Object.entries(res).map((p: any) => this.products.push({id: p[0], ...p[1]}));
+
+      });
+
+  }
 
   ngOnInit(): void {
+      this.loadProducts();
   }
 
   ngOnDestroy(): void {
@@ -74,4 +73,17 @@ export class AdminComponent implements OnInit, OnDestroy {
         }
     );
   }
+
+    onDelete(id: any): void {
+      this.productService.deleteProducts(id).subscribe(
+          res => {
+          console.log('RESPONSE', res);
+          this.loadProducts();
+      },
+          error => {
+              console.log('Error: ', error);
+          }
+      );
+
+    }
 }

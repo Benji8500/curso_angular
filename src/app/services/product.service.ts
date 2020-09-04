@@ -18,4 +18,10 @@ export class ProductService {
   public addProducts(product: any): Observable<any> {
     return this.http.post('https://angular-benjaminsoto-2020.firebaseio.com/products.json', product);
   }
+
+  public deleteProducts(id: any): Observable<any> {
+    return this.http.delete(`https://angular-benjaminsoto-2020.firebaseio.com/products/${id}.json`);
+
+  }
+
 }
