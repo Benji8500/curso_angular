@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
-import {AppRouting} from './app.routing';
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSliderModule} from '@angular/material/slider';
-
-import {MatIconModule} from '@angular/material/icon';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from '@angular/router';
 
 
+const routes: Routes = [
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', loadChildren: () => import('./login/login.module'). then(m => m.LoginModule)},
+  {path: 'pages', loadChildren: () => import('./pages/pages.module'). then(m => m.PagesModule)}
+
+
+
+];
 
 
 @NgModule({
@@ -22,12 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    AppRouting,
-    NgbModule,
-    NoopAnimationsModule,
-    MatSliderModule,
-    MatIconModule
+    RouterModule.forRoot(routes)
   ],
   providers: [
   ],
