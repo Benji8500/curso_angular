@@ -1,6 +1,7 @@
-<p>Login works!</p>
-<!-- FORMULARIOS ORIENTADOS A TEMPLATE -->
 <!--
+<p>Login works!</p>
+ FORMULARIOS ORIENTADOS A TEMPLATE
+
 
 Forma 1
 
@@ -22,7 +23,7 @@ Forma 2
 
 
 Forma 3
--->
+
 <div style="display: flex; flex-direction: column">
     <form (ngSubmit)="onLogin2(formulario)"  #formulario="ngForm">
         <input type= "text" name="username" id="username" ngModel>
@@ -47,7 +48,7 @@ Forma 3
        #name="ngModel">
 
 <div *ngIf="name.invalid && (name.touched || name.dirty)"
-     class="alert alert-danger">
+     class="alert alert-dang er">
 
     <div *ngIf="name.errors.required">
         Name is required
@@ -59,9 +60,9 @@ Forma 3
     Name must be at least 5 characters long
 </div>
 </div>
-<!--<button routerLink="/pages">LOGIN</button> -->
+<button routerLink="/pages">LOGIN</button>
 
-<!-- variable local
+variable local
 <div #test class="class1 class2" id="test2">HOLA</div>
 
 <p>{{test.id}}</p>
@@ -76,3 +77,54 @@ Forma 3
 <ng-container></ng-container>
 <ng-content></ng-content>
 -->
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>LOGIN</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+        <form #form="ngForm" style="display: flex; flex-direction: column">
+            <mat-form-field>
+            <mat-label>E-Mail</mat-label>
+                    <input ngModel
+                           name="password"
+                           matInput
+                           type="text"
+                           required #mailui="ngModel">
+                <div *ngIf="mailui.invalid && (mailui.touched || mailui.dirty)"
+                     class="alert alert-danger">
+
+                    <div *ngIf="mailui.errors.required">
+                        E-mail is required
+                    </div>
+                </div>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input
+                #passwordUi="ngModel"
+                ngModel
+                name="password"
+                matInput
+                type="text"
+                required>
+            <div *ngIf="passwordUi.invalid && (passwordUi.touched || passwordUi.dirty)"
+                 class="alert alert-danger">
+
+                <div *ngIf="passwordUi.errors.required">
+                    Password is required
+                </div>
+            </div>
+        </mat-form-field>
+        </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button [disabled]="form.invalid" (click)="onLogin(form)">Login</button>
+    </mat-card-actions>
+</mat-card>
+
+
+
+
