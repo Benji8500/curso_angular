@@ -21,59 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/1-es2015.3f3861b80620a999e18a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/1-es5.3f3861b80620a999e18a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10-es2015.9af919c5a50dc9253b94.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10-es5.9af919c5a50dc9253b94.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6-es2015.71d0162d16b25307d3fb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6-es5.71d0162d16b25307d3fb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7-es2015.4572330b421cf5fd8ac7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7-es5.4572330b421cf5fd8ac7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8-es2015.ab8542b3d0a97c496571.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8-es5.ab8542b3d0a97c496571.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9-es2015.be0a8e9dcf50a20f0d80.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9-es5.be0a8e9dcf50a20f0d80.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es2015.bace051d6c236f4b623f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es5.bace051d6c236f4b623f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/polyfills-es2015.4af3a34eb93ba2367420.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/polyfills-es5.d9be35f34afe5f78bee5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime-es2015.383c774dd4414b90de85.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime-es5.383c774dd4414b90de85.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/plato/plato.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/directives/ng-else.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/directives/ng-else.directive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin/admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/list/list-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/list/list-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/list/list.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/list/list.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/list/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/list/list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/list/list/list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/list/list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/list/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/list/list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages/pages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages/pages.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages/pages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/plato.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/plato.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +99,7 @@
       <workItem from="1597608451273" duration="31627000" />
       <workItem from="1597864837293" duration="6459000" />
       <workItem from="1600201760972" duration="662000" />
-      <workItem from="1600203726373" duration="6148000" />
+      <workItem from="1600203726373" duration="7615000" />
     </task>
     <servers />
   </component>
@@ -210,9 +160,10 @@
     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
     <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
     <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
-    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600208475176">
-      <screen x="0" y="0" width="1440" height="836" />
+    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600213863755">
+      <screen x="0" y="0" width="1440" height="835" />
     </state>
+    <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.835@0.0.1440.835" timestamp="1600213863755" />
     <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1600208475176" />
     <state x="196" y="300" width="350" height="300" key="org.angular.cli.generate" timestamp="1600205666854">
       <screen x="0" y="0" width="1440" height="836" />

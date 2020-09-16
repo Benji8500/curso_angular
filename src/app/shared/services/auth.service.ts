@@ -2,8 +2,11 @@
  import {HttpClient} from '@angular/common/http';
  import {Observable} from 'rxjs';
  import {environment} from '../../../environments/environment';
+ import {map} from 'rxjs/operators';
 
-@Injectable({
+
+
+ @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
@@ -15,6 +18,17 @@ export class AuthService {
 
   public login(body: any): Observable<any>{
     return this.http.post(`${this.url}/v1/accounts:signInWithCustomToken?key=${this.key}`
-  , body);
+  , body).pipe(
+
+      map((res: any) => {
+          this.authSuccess(res.idToken);
+          return res;
+      })
+    );
+
+  }
+
+  private authSuccess(token: string): void{
+      localStorage.setItem('auth', token);
   }
 }
