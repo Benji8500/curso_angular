@@ -21,9 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +101,7 @@
       <workItem from="1597608451273" duration="31627000" />
       <workItem from="1597864837293" duration="6459000" />
       <workItem from="1600201760972" duration="662000" />
-      <workItem from="1600203726373" duration="7615000" />
+      <workItem from="1600203726373" duration="9707000" />
     </task>
     <servers />
   </component>
@@ -160,14 +162,16 @@
     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
     <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
     <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
-    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600213863755">
-      <screen x="0" y="0" width="1440" height="835" />
+    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600215409951">
+      <screen x="0" y="0" width="1440" height="833" />
     </state>
+    <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1600215409951" />
     <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.835@0.0.1440.835" timestamp="1600213863755" />
     <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1600208475176" />
-    <state x="196" y="300" width="350" height="300" key="org.angular.cli.generate" timestamp="1600205666854">
-      <screen x="0" y="0" width="1440" height="836" />
+    <state x="196" y="299" width="350" height="300" key="org.angular.cli.generate" timestamp="1600217240569">
+      <screen x="0" y="0" width="1440" height="833" />
     </state>
+    <state x="196" y="299" width="350" height="300" key="org.angular.cli.generate/0.0.1440.833@0.0.1440.833" timestamp="1600217240569" />
     <state x="196" y="300" width="350" height="300" key="org.angular.cli.generate/0.0.1440.836@0.0.1440.836" timestamp="1600205666854" />
   </component>
 </project>

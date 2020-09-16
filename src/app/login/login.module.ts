@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
  import { LoginComponent } from './login.component';
 import {NgElseDirective} from '../shared/directives/ng-else.directive';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -32,7 +31,7 @@ const routes: Routes = [
       MatCardModule,
       MatFormFieldModule,
       MatInputModule,
-      HttpClientModule
+
 
 
   ],
