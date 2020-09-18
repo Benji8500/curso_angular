@@ -10,5 +10,8 @@ export class PagesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onLogout(): void {
+    this.authService.logout();
+  }
 
 }

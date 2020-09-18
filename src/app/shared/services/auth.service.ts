@@ -37,4 +37,20 @@
      public getToken(): string {
          return localStorage.getItem('token');
      }
-}
+
+     public getUserId(): string {
+         return localStorage.getItem('userId');
+     }
+
+     public verifyLogged(): boolean {
+         const token = localStorage.getItem('token');
+         return !!token;
+     }
+
+     public logout(): void {
+         localStorage.removeItem('token');
+         localStorage.removeItem('userId');
+         this.router.navigate(['login']);
+     }
+
+ }
