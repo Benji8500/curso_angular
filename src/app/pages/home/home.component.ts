@@ -2,34 +2,57 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from '../../shared/services/product.service';
 import {Subscription} from 'rxjs';
 import {AuthService} from '../../shared/services/auth.service';
-
+import {AddProduct} from './store/home.actions';
+import {Store} from '@ngrx/store';
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  products = [
+  products = [];
 
-  ];
+  productSubs: Subscription;
 
-  prodSubs: Subscription;
+  homeSubs: Subscription;
 
-  constructor(private productService: ProductService, private authService: AuthService) { }
+  cart = [];
+
+  constructor(private store: Store<any>,
+              private productService: ProductService,
+              private authService: AuthService) {
+
+  }
 
   ngOnInit(): void {
-      this.prodSubs = this.productService.getProducts(this.authService.getToken()).subscribe(res => {
-        // object entries convierte el Json en un array de arrays
 
-        console.log('RESPUESTA: ', res);
-        console.log('RESPUESTA: ', Object.entries(res));
+    this.homeSubs = this.store.select(s => s.home).subscribe(res => {
+      this.cart = Object.assign([], res.items);
+      // JSON.parse((JSON.stringify(res))
+    });
 
-        Object.entries(res).map(p => this.products.push(p[1]));
+    this.productSubs = this.productService.getProducts(this.authService.getToken()).subscribe(res => {
 
-      });
+      // [1,2,3,4,5,6];
+      // {{key:1 },{key: 2},{key: 1},{key: 1},{key: 1},{key: 1},{key: 1}}
+      // Object.entries(res) [ [key, 1], [key, 2] , .......              ];
+
+      console.log('RESPUESTA: ', res);
+      console.log('RESPUESTA: ', Object.entries(res));
+
+      Object.entries(res).map(p => this.products.push(p[1]));
+
+    });
+
   }
+
   ngOnDestroy(): void {
-    this.prodSubs.unsubscribe();
+    this.productSubs ? this.productSubs.unsubscribe() : '';
+    this.homeSubs ? this.homeSubs.unsubscribe() : '';
+  }
+
+  onComprar(product): void {
+    this.store.dispatch(AddProduct({product: Object.assign({}, product)}));
   }
 
 }
