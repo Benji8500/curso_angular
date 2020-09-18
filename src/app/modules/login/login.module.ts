@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
-import {NgElseDirective} from '../directives/ng-else.directive';
+import {NgElseDirective} from '../../directives/ng-else.directive';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,12 @@ import {HttpClientModule} from '@angular/common/http';
     CommonModule,
     LoginRoutingModule,
     FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      MatCardModule,
+      MatButtonModule,
+      MatFormFieldModule,
+      MatInputModule
+
 
 
   ]

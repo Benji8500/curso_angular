@@ -1,0 +1,38 @@
+<div style="width: 50%; ">
+    <p>EDITAR COMIDA / CREAR COMIDA</p>
+
+    <form [formGroup]="platoForm" style="display: flex; flex-direction: column">
+        <label for="name">Name:</label>
+        <input formControlName="name" type="text" id="name">
+        <div *ngIf="platoForm.get('name').invalid && (platoForm.get('name').touched || platoForm.get('name').dirty)"
+             class="alert alert-danger">
+
+            <div *ngIf="platoForm.get('name').errors.required">
+                Name is required
+            </div>
+            <div *ngIf="platoForm.get('name').errors.minlength">
+                Name must be at least 3 characters
+            </div>
+
+        </div>
+        <label for="stock">Stock:</label>
+        <input formControlName="price" type="text" id="stock">
+        <label for="price">Price:</label>
+        <input formControlName="stock" type="text" id="price">
+        <label for="type">Type:</label>
+        <input formControlName="type" type="text" id="type">
+        <div *ngIf="platoForm.get('type').invalid && (platoForm.get('type').touched || platoForm.get('type').dirty)"
+             class="alert alert-danger">
+
+            <div *ngIf="platoForm.get('type').errors.required">
+                Type is required
+            </div>
+
+        </div>
+        <label for="url">Url Image:</label>
+        <input formControlName="urlImage" type="text" id="url">
+    </form>
+
+    <button (click)="Create()">CREATE</button>
+    <button (click)="Edit()">UPDATE</button>
+</div>

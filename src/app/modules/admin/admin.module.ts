@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home/home.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminComponent } from './admin.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {PlatoService} from '../../services/plato.service';
@@ -10,13 +10,17 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { HeaderComponent } from './components/header/header.component';
+import { EditorComponent } from './components/editor/editor.component';
+import {AdminService} from '../../services/admin.service';
+import {AuthService} from '../../services/auth.service';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [AdminComponent, HeaderComponent, EditorComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    AdminRoutingModule,
       MatCardModule,
       MatButtonModule,
       HttpClientModule,
@@ -29,8 +33,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],
 
   providers: [
-    PlatoService
+    PlatoService,
+      AdminService,
+      AuthService
   ]
 
 })
-export class HomeModule { }
+export class AdminModule { }

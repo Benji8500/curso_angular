@@ -9,6 +9,8 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
 import {MatSliderModule} from '@angular/material/slider';
 
 import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http';
+import {AdminComponent} from './modules/admin/admin.component';
 
 
 
@@ -27,9 +29,10 @@ import {MatIconModule} from '@angular/material/icon';
     NgbModule,
     NoopAnimationsModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [
+  providers: [AdminComponent
   ],
   bootstrap: [AppComponent]
 })

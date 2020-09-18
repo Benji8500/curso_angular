@@ -4,16 +4,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Routing por componente:
 const routes: Routes = [
-  {path: '', redirectTo: 'pages', pathMatch: 'full'},
-  {path: 'pages', loadChildren: () => import('./pages/pages.module'). then(m => m.PagesModule)}
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', loadChildren: () => import('./modules/login/login.module'). then(m => m.LoginModule)},
+  {
+    path: 'admin',
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
 
+  }
 
 
 ];
 
 /*const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', loadChildren: () => import('./pages1/home/home.module'). then(m => m.HomeModule)},
+  {path: '', redirectTo: 'admin', pathMatch: 'full'},
+  {path: 'admin', loadChildren: () => import('./pages1/admin/admin.module'). then(m => m.AdminModule)},
   {path: 'admin', loadChildren: () => import('./pages1/admin/admin.module'). then(m => m.AdminModule)},
   {path: 'list', loadChildren: () => import('./pages1/list/list.module'). then(m => m.ListModule)}
 
