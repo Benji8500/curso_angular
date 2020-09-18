@@ -16,16 +16,10 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const token = localStorage.getItem('auth');
 
-    if (token){
+    if (token) {
       request = request.clone({
-        url: `${request.url}?auth=${token}`,
-        setHeaders: {
-          Authorization: 'Bearer ' + token
-        }
-          }
-
-
-      );
+        url: request.url.indexOf('?') > -1 ? `${request.url}&auth=${token}` : `${request.url}?auth=${token}`
+      });
     }
 
 

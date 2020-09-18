@@ -27,9 +27,14 @@ export class LoginComponent implements OnInit {
   onLogin(form: any): void {
     console.log('FORM: ', form.value);
 
-    this.authService.login(form.value).subscribe(
+    this.authService.login({
+      email: form.value.email,
+      password: form.value.password,
+      returnSecureToken: true
+    }).subscribe(
         res => {
           console.log('LOGIN RESPONSE: ', res);
+          this.router.navigate(['pages']);
         },
         err => {
           console.log('LOGIN ERROR: ');
@@ -38,10 +43,12 @@ export class LoginComponent implements OnInit {
   }
 
 
-  //Navegacion a partir de TS no de routerLink
+  /*Navegacion a partir de TS no de routerLink
 
   onLogin2(formulario): void {
     console.log('Variable local form: ', formulario.value);
     this.router.navigate(['/pages']);
   }
+  */
+
 }

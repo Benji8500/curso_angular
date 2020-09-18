@@ -8,7 +8,8 @@ import {environment} from '../../../environments/environment';
 }*/)
 export class ProductService {
 
-  url = environment.app.apiBaseurl;
+
+  url = environment.app.apiBaseUrl;
 
   constructor(private http: HttpClient) {
   }
@@ -31,3 +32,4 @@ export class ProductService {
   }
 
 }
+

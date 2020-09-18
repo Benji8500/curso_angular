@@ -1,0 +1,98 @@
+Index: src/app/app.module.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\nimport { AppComponent } from './app.component';\nimport {BrowserAnimationsModule} from '@angular/platform-browser/animations';\nimport {RouterModule, Routes} from '@angular/router';\nimport {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';\nimport {AuthInterceptor} from './shared/interceptors/auth.interceptor';\n\n\nconst routes: Routes = [\n  {path: '', redirectTo: 'login', pathMatch: 'full'},\n  {path: 'login', loadChildren: () => import('./login/login.module'). then(m => m.LoginModule)},\n  {path: 'pages', loadChildren: () => import('./pages/pages.module'). then(m => m.PagesModule)}\n\n\n\n];\n\n\n@NgModule({\n  declarations: [\n    AppComponent\n\n\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    HttpClientModule,\n    RouterModule.forRoot(routes)\n  ],\n  providers: [\n    {\n      provide: HTTP_INTERCEPTORS,\n      useClass: AuthInterceptor,\n      multi: true\n    }\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/app.module.ts	(revision 5027183c66e88aa51a2b46fb5d1fe542f8c14155)
++++ src/app/app.module.ts	(date 1600363076914)
+@@ -5,6 +5,10 @@
+ import {RouterModule, Routes} from '@angular/router';
+ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+ import {AuthInterceptor} from './shared/interceptors/auth.interceptor';
++import { StoreModule } from '@ngrx/store';
++import { EffectsModule } from '@ngrx/effects';
++import { StoreDevtoolsModule } from '@ngrx/store-devtools';
++import { environment } from '../environments/environment';
+ 
+ 
+ const routes: Routes = [
+@@ -27,7 +31,10 @@
+     BrowserModule,
+     BrowserAnimationsModule,
+     HttpClientModule,
+-    RouterModule.forRoot(routes)
++    RouterModule.forRoot(routes),
++    StoreModule.forRoot({}, {}),
++    EffectsModule.forRoot([]),
++    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+   ],
+   providers: [
+     {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"aad5985b-f198-472a-a841-dab4e6c95b4d\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/app.module.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/app.module.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/login/login.component.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/login/login.component.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/login/login.module.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/login/login.module.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/pages/admin/admin.module.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/pages/admin/admin.module.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/pages/home/home.module.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/pages/home/home.module.ts\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"SegundoParcial\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1gCAxkzoOgyJNMzYkfstpl4vTyR\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"ts.external.directory.path\" value=\"$PROJECT_DIR$/node_modules/typescript/lib\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/pages/list\" />\n      <recent name=\"$PROJECT_DIR$/src/app/pages/home\" />\n      <recent name=\"$PROJECT_DIR$/src/app/pages/admin\" />\n      <recent name=\"$PROJECT_DIR$/src/app/pages\" />\n      <recent name=\"$PROJECT_DIR$/src/app/login\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"npm.Angular CLI Server\">\n    <configuration name=\"Tests (curso-angular)\" type=\"JavaScriptTestRunnerKarma\">\n      <config-file value=\"$PROJECT_DIR$/karma.conf.js\" />\n      <karma-package-dir value=\"$PROJECT_DIR$/node_modules/@angular/cli\" />\n      <working-directory value=\"$PROJECT_DIR$\" />\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular Application\" type=\"JavascriptDebugType\" uri=\"http://localhost:4200\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular CLI Server\" type=\"js.build_tools.npm\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"start\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"aad5985b-f198-472a-a841-dab4e6c95b4d\" name=\"Default Changelist\" comment=\"\" />\n      <created>1597608449552</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1597608449552</updated>\n      <workItem from=\"1597608451273\" duration=\"31627000\" />\n      <workItem from=\"1597864837293\" duration=\"6459000\" />\n      <workItem from=\"1600201760972\" duration=\"662000\" />\n      <workItem from=\"1600203726373\" duration=\"9707000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n    <option name=\"exactExcludedFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/src/main.js\" />\n        <option value=\"$PROJECT_DIR$/src/app/app.component.js\" />\n        <option value=\"$PROJECT_DIR$/src/app/app.module.js\" />\n        <option value=\"$PROJECT_DIR$/src/environments/environment.js\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"622\" y=\"188\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1600208184571\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"836\" />\n    </state>\n    <state x=\"622\" y=\"188\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.836@0.0.1440.836\" timestamp=\"1600208184571\" />\n    <state x=\"622\" y=\"192\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.853@0.0.1440.853\" timestamp=\"1597864259373\" />\n    <state x=\"673\" y=\"204\" key=\"EditFileWatcherDialog\" timestamp=\"1597764933716\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"846\" />\n    </state>\n    <state x=\"673\" y=\"204\" key=\"EditFileWatcherDialog/0.0.1440.846@0.0.1440.846\" timestamp=\"1597764933716\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1597865457900\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.bottom/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151514\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.bottom/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457900\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.bottom/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643970\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.center\" timestamp=\"1597865457899\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.center/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151513\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.center/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457899\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.center/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643969\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.left\" timestamp=\"1597865457899\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.left/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151512\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.left/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457899\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.left/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643969\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.right\" timestamp=\"1597865457900\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"852\" />\n    </state>\n    <state width=\"1277\" height=\"216\" key=\"GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835\" timestamp=\"1597613151513\" />\n    <state width=\"932\" height=\"220\" key=\"GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852\" timestamp=\"1597865457900\" />\n    <state width=\"904\" height=\"216\" key=\"GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854\" timestamp=\"1597846643970\" />\n    <state x=\"0\" y=\"157\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1600215409951\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"833\" />\n    </state>\n    <state x=\"0\" y=\"157\" key=\"Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833\" timestamp=\"1600215409951\" />\n    <state x=\"0\" y=\"157\" key=\"Vcs.Push.Dialog.v2/0.0.1440.835@0.0.1440.835\" timestamp=\"1600213863755\" />\n    <state x=\"0\" y=\"157\" key=\"Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836\" timestamp=\"1600208475176\" />\n    <state x=\"196\" y=\"299\" width=\"350\" height=\"300\" key=\"org.angular.cli.generate\" timestamp=\"1600217240569\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"833\" />\n    </state>\n    <state x=\"196\" y=\"299\" width=\"350\" height=\"300\" key=\"org.angular.cli.generate/0.0.1440.833@0.0.1440.833\" timestamp=\"1600217240569\" />\n    <state x=\"196\" y=\"300\" width=\"350\" height=\"300\" key=\"org.angular.cli.generate/0.0.1440.836@0.0.1440.836\" timestamp=\"1600205666854\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 5027183c66e88aa51a2b46fb5d1fe542f8c14155)
++++ .idea/workspace.xml	(date 1600363025760)
+@@ -21,11 +21,30 @@
+   <component name="ChangeListManager">
+     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/1-es2015.8146155374071ae33609.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/1-es5.8146155374071ae33609.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/10-es2015.4db6c408b8ec0290beb6.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/10-es5.4db6c408b8ec0290beb6.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/8-es2015.8beea9a895f76653e71f.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/8-es5.8beea9a895f76653e71f.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/9-es2015.fcc6b66f40370d8f7625.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/9-es5.fcc6b66f40370d8f7625.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/common-es2015.26faf48ad5b219042138.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/common-es5.26faf48ad5b219042138.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/main-es2015.6ab3c451ada723f13b73.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/main-es5.6ab3c451ada723f13b73.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/runtime-es2015.16ab0f172d6f4c85be2f.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/runtime-es5.16ab0f172d6f4c85be2f.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/dist/styles.191916fa51503ff23666.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.module.ts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.module.ts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.component.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/app/shared/interceptors/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/interceptors/auth.interceptor.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -101,7 +120,8 @@
+       <workItem from="1597608451273" duration="31627000" />
+       <workItem from="1597864837293" duration="6459000" />
+       <workItem from="1600201760972" duration="662000" />
+-      <workItem from="1600203726373" duration="9707000" />
++      <workItem from="1600203726373" duration="10261000" />
++      <workItem from="1600350481978" duration="5544000" />
+     </task>
+     <servers />
+   </component>
+@@ -162,10 +182,10 @@
+     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
+     <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
+     <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
+-    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600215409951">
++    <state x="0" y="157" key="Vcs.Push.Dialog.v2" timestamp="1600218899279">
+       <screen x="0" y="0" width="1440" height="833" />
+     </state>
+-    <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1600215409951" />
++    <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1600218899279" />
+     <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.835@0.0.1440.835" timestamp="1600213863755" />
+     <state x="0" y="157" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1600208475176" />
+     <state x="196" y="299" width="350" height="300" key="org.angular.cli.generate" timestamp="1600217240569">
