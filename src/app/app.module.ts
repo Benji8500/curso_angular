@@ -9,10 +9,9 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
 import {MatSliderModule} from '@angular/material/slider';
 
 import {MatIconModule} from '@angular/material/icon';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AdminComponent} from './modules/admin/admin.component';
-
-
+import {AuthInterceptor} from './auth.interceptor';
 
 
 @NgModule({
@@ -32,7 +31,12 @@ import {AdminComponent} from './modules/admin/admin.component';
     MatIconModule,
     HttpClientModule
   ],
-  providers: [AdminComponent
+  providers: [AdminComponent,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
