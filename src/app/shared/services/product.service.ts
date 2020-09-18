@@ -15,8 +15,8 @@ export class ProductService {
   }
 
 
-  public getProducts(): Observable<any> {
-    return this.http.get(`${this.url}/products.json`);
+  public getProducts(token: any): Observable<any> {
+    return this.http.get(`${this.url}/products.json?auth=${token}`);
   }
 
   public addProducts(product: any): Observable<any> {

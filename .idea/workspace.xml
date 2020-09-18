@@ -21,9 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5985b-f198-472a-a841-dab4e6c95b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/admin/admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/admin/admin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/pages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/shared/interceptors/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/interceptors/auth.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/services/product.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,7 @@
       <updated>1597608449552</updated>
       <workItem from="1597608451273" duration="31627000" />
       <workItem from="1597864837293" duration="6459000" />
-      <workItem from="1600395488082" duration="2303000" />
+      <workItem from="1600395488082" duration="3003000" />
     </task>
     <servers />
   </component>
@@ -158,10 +162,10 @@
     <state width="1277" height="216" key="GridCell.Tab.0.right/0.0.1440.835@0.0.1440.835" timestamp="1597613151513" />
     <state width="932" height="220" key="GridCell.Tab.0.right/0.0.1440.852@0.0.1440.852" timestamp="1597865457900" />
     <state width="904" height="216" key="GridCell.Tab.0.right/0.0.1440.854@0.0.1440.854" timestamp="1597846643970" />
-    <state x="640" y="155" key="Vcs.Push.Dialog.v2" timestamp="1600397284915">
+    <state x="640" y="155" key="Vcs.Push.Dialog.v2" timestamp="1600398063551">
       <screen x="0" y="0" width="1440" height="833" />
     </state>
-    <state x="640" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1600397284915" />
+    <state x="640" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.833@0.0.1440.833" timestamp="1600398063551" />
     <state x="952" y="297" width="350" height="300" key="org.angular.cli.generate" timestamp="1600397656330">
       <screen x="0" y="0" width="1440" height="833" />
     </state>

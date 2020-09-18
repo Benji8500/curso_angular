@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ProductService} from '../../shared/services/product.service';
 import {Subscription} from 'rxjs';
+import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
   templateUrl: './admin.component.html',
@@ -23,10 +24,8 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   // Esto nos ayuda a construir los formularios
   constructor(private formBuilder: FormBuilder,
-              private productService: ProductService) {
-
-
-
+              private productService: ProductService,
+              private authService: AuthService) {
 
 
 
@@ -43,7 +42,7 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   loadProducts(): void{
     this.products = [];
-    this.prodGetSubs = this.productService.getProducts().subscribe(res => {
+    this.prodGetSubs = this.productService.getProducts(this.authService.getToken()).subscribe(res => {
           // object entries convierte el Json en un array de arrays
 
           Object.entries(res).map((p: any) => this.products.push({id: p[0], ...p[1]}));
