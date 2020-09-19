@@ -10,6 +10,7 @@ import {AuthService} from './auth.service';
 export class AdminService {
   platoForm: FormGroup;
   platoSubs: Subscription;
+  value: string;
   platos = [
 
   ];

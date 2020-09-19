@@ -6,6 +6,9 @@
 
     </span>
     </div>
+    <input matInput type="text" [(ngModel)]="value">
+    <button mat-button (click)="search(value)" style="background-color: aliceblue">
+        BUSCAR</button>
     <button (click)="onLogout()">LOGOUT</button>
     <p style="color: white"></p>
 

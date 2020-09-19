@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 
   }
   // tslint:disable-next-line:use-lifecycle-interface
+    value: string;
   ngOnChanges(): void {
     this.platos = this.adminService.platos;
     this.stockTot =  this.platos.reduce((total, platos) => total + platos.stock, 0);
@@ -41,4 +42,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 
   }
 
+  search(value: string) {
+    this.adminService.value = value;
+  }
 }

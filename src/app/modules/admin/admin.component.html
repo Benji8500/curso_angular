@@ -6,65 +6,132 @@
 
 <br>
 
+<ng-template [ngIf]="!this.adminService.value">
+    <div>NACIONAL:</div>
 
 
-<div>NACIONAL:</div>
+    <div class=" row" style="padding: 20px">
+        <div *ngFor="let plato of adminService.platos"
+             style="padding: 20px; display: flex">
+            <div *ngIf="plato.type==='nacional'">
+                <mat-card class="example-card">
+                    <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
+                        <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
+                        <mat-card-subtitle> Precio: {{plato.price}} Bs </mat-card-subtitle>
+                        <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
 
+                    </mat-card-header>
+                    <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                        <p>
+                            {{plato.description}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button (click)="toggleEdit(plato)">Edit</button>
+                        <button mat-button (click)="Delete(plato.id)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
 
-<div class=" row" style="padding: 20px">
-    <div *ngFor="let plato of adminService.platos"
-         style="padding: 20px; display: flex">
-        <div *ngIf="plato.type==='nacional'">
-            <mat-card class="example-card">
-                <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
-                    <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
-                    <mat-card-subtitle> Precio: {{plato.price}} Bs </mat-card-subtitle>
-                    <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
-
-                </mat-card-header>
-                <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <p>
-                        {{plato.description}}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="toggleEdit(plato)">Edit</button>
-                    <button mat-button (click)="Delete(plato.id)">Delete</button>
-                </mat-card-actions>
-            </mat-card>
         </div>
-
     </div>
-</div>
-<br>
-<div>INTERNACIONAL:</div>
-<div class=" row" style="padding: 20px">
-    <div *ngFor="let plato of platos"
-         style="padding: 20px; display: flex">
-        <div *ngIf="plato.type==='internacional'">
-            <mat-card class="example-card">
-                <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
-                    <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
-                    <mat-card-subtitle> Precio: {{plato.price}} $ </mat-card-subtitle>
-                    <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
+    <br>
+    <div>INTERNACIONAL:</div>
+    <div class=" row" style="padding: 20px">
+        <div *ngFor="let plato of platos"
+             style="padding: 20px; display: flex">
+            <div *ngIf="plato.type==='internacional'">
+                <mat-card class="example-card">
+                    <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
+                        <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
+                        <mat-card-subtitle> Precio: {{plato.price}} $ </mat-card-subtitle>
+                        <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
 
-                </mat-card-header>
-                <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <p>
-                        {{plato.description}}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="toggleEdit(plato)">Edit</button>
-                    <button mat-button (click)="Delete(plato.id)">Delete</button>
-                </mat-card-actions>
-            </mat-card>
+                    </mat-card-header>
+                    <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                        <p>
+                            {{plato.description}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button (click)="toggleEdit(plato)">Edit</button>
+                        <button mat-button (click)="Delete(plato.id)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
         </div>
-
     </div>
-</div>
+</ng-template>
+
+<ng-template [ngIf]="!!this.adminService.value">
+    <div>NACIONAL:</div>
+
+
+    <div class=" row" style="padding: 20px">
+        <div *ngFor="let plato of adminService.platos"
+             style="padding: 20px; display: flex">
+            <div *ngIf="plato.type==='nacional'">
+                <div *ngIf="plato.name.includes(this.adminService.value)">
+                    <mat-card class="example-card">
+                        <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
+                            <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
+                            <mat-card-subtitle> Precio: {{plato.price}} Bs </mat-card-subtitle>
+                            <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
+
+                        </mat-card-header>
+                        <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                            <p>
+                                {{plato.description}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button (click)="toggleEdit(plato)">Edit</button>
+                            <button mat-button (click)="Delete(plato.id)">Delete</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div>INTERNACIONAL:</div>
+        <div class=" row" style="padding: 20px">
+            <div *ngFor="let plato of platos"
+                 style="padding: 20px; display: flex">
+                <div *ngIf="plato.type==='internacional'">
+                    <mat-card class="example-card">
+                        <mat-card-header [ngStyle]="{'background': plato.stock>0 ? 'orange' : 'red' }">
+                            <mat-card-title>Nombre: {{plato.name | uppercase}}</mat-card-title>
+                            <mat-card-subtitle> Precio: {{plato.price}} $ </mat-card-subtitle>
+                            <mat-card-subtitle> Stock:{{plato.stock}} </mat-card-subtitle>
+
+                        </mat-card-header>
+                        <img mat-card-image src="{{plato.urlImage}}" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                            <p>
+                                {{plato.description}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button (click)="toggleEdit(plato)">Edit</button>
+                            <button mat-button (click)="Delete(plato.id)">Delete</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+
+            </div>
+        </div>
+            </div>
+
+</ng-template>
+
+
+
+
 
 
 
